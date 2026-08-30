@@ -8,7 +8,7 @@ A formula-driven operational workbook for maintaining ecommerce product, stock a
 
 ## Project result
 
-The workbook processes **100 synthetic orders across 40 products** and separates clean records from exceptions before calculating stock or reporting values.
+The workbook processes **100 synthetic orders across 40 products**, separates clean records from exceptions and uses only clean records in stock reconciliation and reporting.
 
 | Control result | Records |
 |---|---:|
@@ -32,7 +32,7 @@ Only order rows marked `OK` feed the stock reconciliation and clean reporting me
 
 ## Excel controls demonstrated
 
-- `INDEX` and `MATCH` retrieve unit prices from the product master using SKU.
+- `INDEX` and `MATCH` retrieve unit prices from the product master using the SKU.
 - `SUMIFS` calculates fulfilled quantities, weekly order value and clean fulfilled value.
 - `COUNTIF` and `COUNTIFS` detect duplicate order IDs, validate SKUs and count clean orders by product.
 - Data-validation lists standardise order status and customer region inputs.
@@ -60,7 +60,7 @@ The synthetic source data includes controlled errors so the workbook can demonst
 
 1. Download and open [`Ecommerce-Stock-and-Order-Control.xlsx`](Ecommerce-Stock-and-Order-Control.xlsx) in Microsoft Excel.
 2. Start on the `Dashboard` worksheet.
-3. Review the five order exceptions and five stock variances in `Exception Log`.
+3. Review the five order exceptions and five stock variances on the `Exception Log` worksheet.
 4. Trace the linked order or SKU back to its source worksheet.
 5. Inspect the formulas and input validation to see how clean records flow into the report.
 
